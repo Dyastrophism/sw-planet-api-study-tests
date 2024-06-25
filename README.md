@@ -12,14 +12,14 @@ This is a RESTful API built with Spring Boot that provides information about pla
 
 ## Technologies Used
 
-- Java
-- Spring Boot
-- MySQL
-- Maven
-- JUnit
-- Mockito
-- H2 Database
-- Docker
+- [Mysql](https://dev.mysql.com/downloads/mysql/)
+- [Java](https://www.oracle.com/java/technologies/downloads/)
+- [Maven](https://maven.apache.org/download.cgi)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Testing](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testing-introduction)
+- [JUnit 5](https://junit.org/junit5/docs/current/user-guide/)
+- [Mockito](https://site.mockito.org)
+- [AssertJ](https://github.com/assertj/assertj)
 
 ## API Endpoints
 
@@ -30,6 +30,23 @@ This is a RESTful API built with Spring Boot that provides information about pla
 - `DELETE /planets/{id}`: Remove a planet by its ID.
 
 ## Running the Application
+
+The project uses MySQL, so remember to create the database.
+
+```
+$ sudo mysql
+
+CREATE USER 'user123'@'%' IDENTIFIED BY 'senha123';
+GRANT ALL PRIVILEGES ON *.* TO 'user123'@'%' WITH GRANT OPTION;
+
+exit
+
+$ mysql -u user123 -p
+
+CREATE DATABASE starwars;
+
+exit
+```
 
 To run the application, you need to have Java and Maven installed on your machine. Then, you can run the following command in the root directory of the project:
 
